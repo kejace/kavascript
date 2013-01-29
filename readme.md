@@ -1,4 +1,4 @@
-== kristoffer + javascript
+## kristoffer + javascript
 
 Some experiments using Runge-Kutta and Inverse Fourier transform.
 Try out
