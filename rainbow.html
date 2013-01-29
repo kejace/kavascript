@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title></title>
+<style type="text/css"> 
+	body {
+		background-color: #000000;
+		margin: 0px;
+		text-align:center;
+	}
+	canvas {
+		background-color:#111111;
+	}
+
+</style>
+
+
+</head>
+<body>
+<script src="klib.js"></script>
+<script>
+
+
+// EXPRESSIONS
+
+Rainbow = function(){
+	
+	this.makeF = function(p1,p2){
+		return function(x,y){  
+	    	// return the value of y'
+	    	return Math.pow(x,2/p1)*y - p1*y/p2* Math.sin(time/p2)+ Math.sin(time/3)-Math.sin(x*Math.sin(time))
+		}
+	}
+
+	this.draw = function(scale){
+
+	f = this.makeF(mouseX/10,mouseY/10)
+
+		for(var j = -10; j < 10; j += 0.2){
+			y = rk4(100,j,20)
+			ctx.strokeStyle = "hsl({0},100%,80%)".format(180*j)
+			ctx.beginPath()
+			for(var i = 0; i < y.length; i++){
+				ctx.lineTo(scale*y[i][1],-scale*y[i][0])
+			}
+			ctx.stroke()
+		}
+	}
+
+	this.tick = function(){
+
+		ctx.clearRect(0,0,canvas.width,canvas.height)
+
+		ctx.save()
+		ctx.translate(400,1000)
+		rainbow.draw(50)
+		ctx.restore(); 
+		
+		time += 0.005
+		
+	}
+
+}
+
+// DECLARATIONS
+
+function initMouseListeners() {
+	document.addEventListener( 'mousemove', onMouseMove, false);
+	document.addEventListener( 'mousedown', onMouseDown, false );
+	document.addEventListener( 'mouseup', onMouseUp, false );
+}
+
+function onMouseMove( event ) {
+	event.preventDefault();
+	mouseX = event.clientX;
+	mouseY = event.clientY;
+}
+
+function onMouseDown(event) {
+	mouseDown = true; 
+}
+function onMouseUp(event) {
+	mouseDown = false; 
+}
+
+window.onload = function(){
+	
+	setInterval(rainbow.tick, 1000 / 60);
+}
+
+mouseX = 200
+mouseY = 200
+
+// canvas element and 2D context
+var canvas = document.createElement( 'canvas' ),
+ctx = canvas.getContext( '2d' );
+
+canvas.width = 800; 
+canvas.height = 1200; 
+document.body.appendChild(canvas);
+
+ctx.strokeStyle = "white"
+
+initMouseListeners()
+
+var time = 0
+
+vals = []
+
+rainbow = new Rainbow()
+
+
+</script>
+</body>
+</html>

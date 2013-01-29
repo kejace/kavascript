@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style type="text/css"> 
+	body {
+		background-color: #555555;
+		margin: 0px;
+		text-align:center;
+	}
+	canvas {
+		background-color:#111111;
+	}
+
+</style>
+</head>
+<body>
+
+<script src="klib.js"></script>
+<script src="dat.gui.js"></script>
+<script type="text/javascript"> 
+
+	var anharmonicity = 0.1;
+	var offset = 0.1;
+	var squeeze = 1.1;
+	var state = 0
+ 
+	// canvas element and 2D context
+	var canvas = document.createElement( 'canvas' ),
+	ctx = canvas.getContext( '2d' );
+
+	canvas.width = 800; 
+	canvas.height = 800; 
+	document.body.appendChild(canvas);
+
+	ctx.strokeStyle = "white"
+
+	// Fourier transform from http://home.fuse.net/clymer/graphs/fourier.html
+	// Solver based on http://www.astro.washington.edu/users/vanderplas/coding/schrodinger.pdf
+	 
+	 
+	N = 128;
+
+	table_s = range(N).map(function (i) { return Math.sin(2*Math.PI*i/N); });
+	table_c = range(N).map(function (i) { return Math.cos(2*Math.PI*i/N); });
+	 
+	a = -5;
+	b = 5;
+	L = b-a;
+	delta_k = 2*Math.PI/L
+	delta_x = L/N;
+	hbar = 1;
+	delta_t = 0.05
+	m = 1;
+	 
+	psi_r = new Array();
+	psi_i = new Array();
+	 
+	table_vc = new Array();
+	table_vs = new Array();
+	 
+	cache_potential();
+	 
+	table_ks = range(N).map(function(i) {
+	    k = delta_k*(i<N/2 ? i : N-i);
+	    theta = hbar*k*k*delta_t/(2*m);
+	    return Math.sin(theta);
+	});
+	 
+	table_kc = range(N).map(function(i) {
+	    var k = delta_k*(i<N/2 ? i : N-i);
+	    var theta = hbar*k*k*delta_t/(2*m);
+	    return Math.cos(theta);
+	});
+	 
+	function h0(x) {
+	    return 1;
+	}
+	function h1(x) {
+	    return x;
+	}
+	function h2(x) {
+	    return 4*x*x-2;
+	}
+	function h3(x) {
+	    return 8*x*x*x-12*x;
+	}
+	function h4(x) {
+	    return 16*x*x*x*x-48*x*x+12;
+	}
+	 
+	function h(n, x) {
+	    return [h0, h1, h2, h3, h4][n](x);
+	}
+	 
+	function setState(n) {
+	    with (Math) {
+	        t = 0;
+	        for (var i = 0; i<N; ++i) {
+	            x = a+delta_x*i;
+	            psi_r[i] = h(n,x)*exp(-x*x/2);
+	            psi_i[i] = 0;
+	            t = t+psi_r[i]*psi_r[i]+psi_i[i]*psi_i[i];
+	        }
+	        t = 1/sqrt(t);
+	        for (var i = 0; i<N; ++i) {
+	            psi_r[i] *= t;
+	            psi_i[i] *= t;
+	        }
+	    }
+	}
+
+	 
+	function v(x) {
+	    with (Math) {
+	        var z = squeeze*(x-offset);
+	        return 0.5*z*z+anharmonicity*z*z*z*z;
+	    }
+	}
+
+	function cache_potential() {
+	    table_vs = range(N).map(function(i) {
+	        z = a+delta_x*i;
+	        theta = v(z)*delta_t/(2*hbar);
+	        return Math.sin(theta);
+	    });
+	 
+	    table_vc = range(N).map(function(i) {
+	        z = a+delta_x*i;
+	        theta = v(z)*delta_t/(2*hbar);
+	        return Math.cos(theta);
+	    });
+	}
+
+
+	function evolve(psi_r, psi_i) {
+	    with (Math) {
+	        // First psi' = -iV/2 psi step
+	        for (var i = 0; i<N; ++i) {
+	            x = psi_r[i];
+	            y = psi_i[i];
+	            c = table_vc[i];
+	            s = table_vs[i];
+	            psi_r[i] = c*x+s*y;
+	            psi_i[i] = -s*x+c*y;
+	        }
+	 
+	        fft(psi_r, psi_i);
+	 
+	        // psi' = -d^2/d^x psi step
+	        for (var i = 0; i<N; ++i) {
+	            k = delta_k*(i<N/2 ? i : N-i);
+	            theta = hbar*k*k*delta_t/(2*m);
+	            x = psi_r[i];
+	            y = psi_i[i];
+	            c = table_kc[i];
+	            s = table_ks[i];
+	            psi_r[i] = c*x+s*y;
+	            psi_i[i] = -s*x+c*y;
+	        }
+	 
+	        ifft(psi_r, psi_i);
+	 
+	        // Second psi' = -iV/2 psi step
+	        for (var i = 0; i<N; ++i) {
+	            x = psi_r[i];
+	            y = psi_i[i];
+	            c = table_vc[i];
+	            s = table_vs[i];
+	            psi_r[i] = c*x+s*y;
+	            psi_i[i] = -s*x+c*y;
+	        }
+	    }
+	}
+	 
+	widthScaler = range(800)
+
+	function project(i, x, y) {
+	    return [widthScaler[i]+100*x, 300-400*y];
+	};
+
+	function probabilityScaler(i){
+		return i;
+	}
+	 
+	function potentialScaler(i){
+		return 20*i;
+	}
+
+	function widthScaler(i){
+		return i;
+	}
+
+	function reset(){
+		 
+		setState(0);
+		anharmonicity = 0.1;
+		offset = 0.2;
+		squeeze = 1.1;
+
+	}
+
+	var counter = 0
+	reset()
+	function tick() {
+
+		ctx.fillStyle = "rgba(0,0,0,0.4)"; 
+		ctx.fillRect(0, 0, canvas.width, canvas.height); 
+
+	    data = range(N).map(function(i) {
+	        return project(5*i,psi_r[i],psi_i[i]); }
+	    )
+
+
+		ctx.beginPath()
+	
+		for(var i = 0; i < data.length; i++){
+			ctx.lineTo(data[i][0],data[i][1])
+		}
+		ctx.stroke()
+
+	    data = range(N).map(function(i) {
+	        return [5*i, 200+-1800*psi_i[i]*psi_i[i]+psi_r[i]*psi_r[i]]; }
+	    )
+
+		ctx.beginPath()
+	
+		
+		ctx.strokeStyle = "hsl("+counter+", 100%,95%)"; 
+		for(var i = 0; i < data.length; i++){
+			ctx.lineTo(data[i][0],data[i][1])
+		}
+		ctx.stroke()
+	    evolve(psi_r, psi_i);
+
+	    cache_potential();
+
+	    counter+=20
+
+	}
+	 
+	setInterval(tick,  1000/30)
+	 
+
+
+
+
+window.onload = function() {
+  var gui = new dat.GUI();
+  gui.add(this, 'anharmonicity', 0, 5).listen()
+  gui.add(this, 'squeeze', 0, 5).listen()
+  gui.add(this, 'offset', 0, 5).listen()
+  gui.add(this, 'state',  { "Ground": 0, "First excited": 1, "Second Excited": 2 , "Third Excited" : 3}).onChange(function(){setState(state)});
+  gui.add(this, 'reset');
+};
+
+</script> 
+
+</div> 
+
+
+</body>
+</html>
