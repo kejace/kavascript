@@ -29,7 +29,7 @@
 	var canvas = document.createElement( 'canvas' ),
 	ctx = canvas.getContext( '2d' );
 
-	canvas.width = 800; 
+	canvas.width = 820; 
 	canvas.height = 800; 
 	document.body.appendChild(canvas);
 
@@ -198,38 +198,65 @@
 		offset = 0.2;
 		squeeze = 1.1;
 
+		olddata = []
+
+		stripW = Math.floor(2 + Math.random() * 5) // random in 7-10
+		stripC = Math.floor(2 + Math.random() * 4)
+
+		specW = Math.floor(2 + Math.random() * 30)
+		specC1 = Math.floor(100 + Math.random() * 300)
+		specC2 = Math.floor(20 + Math.random() * 80)
+
 	}
 
 	var counter = 0
 	reset()
+
 	function tick() {
 
-		ctx.save()
+		//ctx.save()
 
-		//ctx.fillStyle = "rgba(0,0,0,0.4)"; 
-		//ctx.fillRect(0, 0, canvas.width, canvas.height); 
+		ctx.fillStyle = "rgba(1,1,1,1)"; 
+		ctx.fillRect(0, 0, canvas.width, canvas.height); 
+
+
 
 	    data = range(N).map(function(i) {
 	        return project(5*i,psi_r[i],psi_i[i]); }
 	    )
 
-
-		ctx.fillStyle = "rgba(0.5,0.8,0.2,1.0)"; 
-		ctx.beginPath()
-	
-		for(var i = 0; i < data.length; i++){
-			ctx.lineTo(10+data[i][0],data[i][1])
+	    if(olddata.length < 1){
+			olddata.push(data);
 		}
 
-		for(var i = 0; i < data.length; i++){
-			ii = data.length - i - 1
-			ctx.lineTo(10+data[ii][0],0.975	*data[ii][1])
+
+		
+		
+		for(var qi = 0; qi < olddata.length - 1; qi++){
+			ctx.beginPath()
+			for(var i = 0; i < olddata[qi].length; i++){
+				ii = i
+				ctx.lineTo(10+olddata[qi][ii][0],-200+10*qi+olddata[qi][ii][1])
+			}
+
+			for(var i = 0; i < olddata[qi].length; i++){
+				ii = olddata[qi].length - i - 1
+				ctx.lineTo(10+olddata[qi+1][ii][0],-200+10*(qi+1)+olddata[qi+1][ii][1])
+			}
+			ctx.closePath();
+
+			ctx.fillStyle = 'hsl({0},50%,{1}%)'.format((qi%stripC)*specC1+ specC2, qi%stripW * specW);
+      		ctx.fill();
+
+      		ctx.lineWidth = 1;
+      		ctx.strokeStyle = 'black';
+			ctx.stroke();
 		}
 
-		ctx.lineTo(10+data[0][0],data[0][1])
-
-		ctx.fill()
-		ctx.stroke()
+		
+		
+      
+		
 
 		/*
 
@@ -248,13 +275,17 @@
 		ctx.stroke()
 
 		*/
+
+		if(olddata.length > 50){
+			olddata.shift()
+		}
+		olddata.push(data);
+
 	    evolve(psi_r, psi_i);
 
 	    cache_potential();
 
-	    counter+=10
-
-	    ctx.restore()
+	    counter+=10;
 
 	}
 	 
