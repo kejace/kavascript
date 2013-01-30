@@ -18,9 +18,11 @@
 
 </head>
 <body>
+<script src="dat.gui.js"></script>
 <script src="klib.js"></script>
 <script>
 
+var retardedness = 250
 
 // EXPRESSIONS
 
@@ -79,7 +81,7 @@ Rainbow = function(){
 		rainbow.draw(50)
 		ctx.restore(); 
 		
-		time += 0.005
+		time += 1.0/retardedness
 		
 	}
 
@@ -107,8 +109,17 @@ function onMouseUp(event) {
 }
 
 window.onload = function(){
+	  var gui = new dat.GUI();
+  	gui.add(this, 'retardedness', 0, 1000).listen()
+  	gui.add(this, 'reset');
 	
 	setInterval(rainbow.tick, 1000 / 60);
+}
+
+function reset(){
+	 
+	time = 0
+
 }
 
 mouseX = 200
