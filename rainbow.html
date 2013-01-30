@@ -29,7 +29,10 @@ Rainbow = function(){
 	this.makeF = function(p1,p2){
 		return function(x,y){  
 	    	// return the value of y'
-	    	return Math.pow(x,2/p1)*y - p1*y/p2* Math.sin(time/p2)+ Math.sin(time/3)-Math.sin(x*Math.sin(time))
+	    	return  Math.pow(x,2/(p2+x))*y / ((0.5*Math.sin(time/3)+0.5)*x+10)
+	    			- (p1/p2) * y * Math.sin(time )
+	    			+ Math.sin((p2 + (Math.sin(time/0.5)+1)*y) * x * time/5)
+	    			- Math.sin( (Math.cos(time/4)*+1)*x+y*Math.sin(time*(Math.sin(time/0.2)+1)*y))
 		}
 	}
 
@@ -37,13 +40,32 @@ Rainbow = function(){
 
 	f = this.makeF(mouseX/10,mouseY/10)
 
-		for(var j = -10; j < 10; j += 0.2){
-			y = rk4(100,j,20)
-			ctx.strokeStyle = "hsl({0},100%,80%)".format(180*j)
+		yy= []
+		cols = []
+
+
+		for(var j = -10; j < 10; j += 0.5){
+			yy.push(rk4(300,j,18))
+			cols.push("hsl({0},50%,{1}%)".format(((j) % 1) * 360, (j+10)*5))
+		}
+		for(var j = 0; j < yy.length-1; j++){
+			y1 = yy[j]
+			y2 = yy[j+1]
+			ctx.strokeStyle = cols[j]
+			ctx.fillStyle = cols[j]
 			ctx.beginPath()
-			for(var i = 0; i < y.length; i++){
-				ctx.lineTo(scale*y[i][1],-scale*y[i][0])
+
+			for(var i = 0; i < y1.length; i++){
+				ctx.lineTo(scale*y1[i][1],-scale*y1[i][0])
 			}
+
+			for(var i = 0; i < y2.length; i++){
+				ii = y2.length - i -1
+				ctx.lineTo(scale*y2[ii][1],-scale*y2[ii][0])
+			}
+
+			ctx.fill()
+
 			ctx.stroke()
 		}
 	}
@@ -53,7 +75,7 @@ Rainbow = function(){
 		ctx.clearRect(0,0,canvas.width,canvas.height)
 
 		ctx.save()
-		ctx.translate(400,1000)
+		ctx.translate(600,1000)
 		rainbow.draw(50)
 		ctx.restore(); 
 		
@@ -96,8 +118,8 @@ mouseY = 200
 var canvas = document.createElement( 'canvas' ),
 ctx = canvas.getContext( '2d' );
 
-canvas.width = 800; 
-canvas.height = 1200; 
+canvas.width = 1280; 
+canvas.height = 1024; 
 document.body.appendChild(canvas);
 
 ctx.strokeStyle = "white"

@@ -1,0 +1,407 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"normali",
+				"normalize_image"
+			],
+			[
+				"frames",
+				"frames_to_blur"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "klib.js",
+			"settings":
+			{
+				"buffer_size": 3544,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "rainbow.html",
+			"settings":
+			{
+				"buffer_size": 1895,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "schroedinger.html",
+			"settings":
+			{
+				"buffer_size": 5175,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 242.0,
+		"selected_items":
+		[
+			[
+				"mark",
+				"Markdown Preview: current file in browser"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/kjosefss/Dropbox/kavascript/schroedinger.html",
+		"/C/Users/kjosefss/Dropbox/kavascript/schroedinger_02.html",
+		"/S/12_Users/Kristoffer/creativejs/mystuff/rainbow.html",
+		"/C/Users/kjosefss/Dropbox/creativejs/klib.js",
+		"/C/Users/kjosefss/Dropbox/kavascript/rainbow.html",
+		"/C/Users/kjosefss/Dropbox/kavascript/readme.md",
+		"/S/12_Users/Kristoffer/pami_sur3d_code/Makefile",
+		"/C/Users/kjosefss/Dropbox/inverselight/20130115_bluemarble/makemovie.bat",
+		"/C/Users/kjosefss/Desktop/mayavitest.py",
+		"/C/Users/kjosefss/Dropbox/inverselight/laser-k.ies",
+		"/C/Users/kjosefss/Dropbox/inverselight/optimal_transport.py",
+		"/C/Users/kjosefss/Dropbox/inverselight/kj_02.csv",
+		"/C/Users/kjosefss/Dropbox/inverselight/kj_01.csv",
+		"/C/Users/kjosefss/Desktop/3d-optimal-mass-transport/mkwarp2.py",
+		"/C/Users/kjosefss/ompc/spin/spin.m",
+		"/C/Users/kjosefss/ompc/spin/spin.pym",
+		"/C/Users/kjosefss/ompc/spin/spindemo.m",
+		"/C/Users/kjosefss/Desktop/3d-optimal-mass-transport/ryan_stupid_time.py",
+		"/C/Users/kjosefss/Desktop/3d-optimal-mass-transport/mkwarp.py",
+		"/C/Program Files/Blender Foundation/Blender/2.65/python/lib/site-packages/README",
+		"/C/Users/kjosefss/Dropbox/inverselight/kj_surf.vw",
+		"/C/Users/kjosefss/Dropbox/inverselight/man_01.csv",
+		"/C/Users/kjosefss/Dropbox/inverselight/outnewtest_pts.vw",
+		"/C/Users/kjosefss/Dropbox/inverselight/outnewtest_surf.vw",
+		"/C/Users/kjosefss/Dropbox/inverselight/outy3_pts.vw",
+		"/C/Users/kjosefss/Dropbox/Apps/Calepin/balticbride.md",
+		"/C/Users/kjosefss/Dropbox/inverselight/20121217_render_new/019.lxs",
+		"/C/Users/kjosefss/Dropbox/inverselight/generateSuns.py",
+		"/C/Users/kjosefss/Desktop/TPF2_eval/launch.bat",
+		"/C/Users/kjosefss/Dropbox/Apps/Calepin/antoniodesimone.md",
+		"//corporate/data/Confidential_Projects/1879/CAD/smg/kristoffer/120412_GMS_FINAL/csv2xls.py",
+		"//corporate/data/Confidential_Projects/1879/CAD/smg/kristoffer/120412_GMS_FINAL/KIA.py",
+		"//corporate/data/Confidential_Projects/1879/CAD/smg/kristoffer/120412_GMS_FINAL/120311-ghgms-01.py",
+		"//corporate/data/Confidential_Projects/1879/CAD/smg/kristoffer/120412_GMS_FINAL/120313-ghgmsides-01.py",
+		"//corporate/data/Confidential_Projects/1879/CAD/smg/kristoffer/120412_GMS_FINAL/120315_gmspoints_01.py",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/120308_GMS_08.py",
+		"/S/12_Users/Kristoffer/scripts/pchip/pychip.py",
+		"/S/12_Users/Kristoffer/scripts/pchip/numpytest.py",
+		"/C/Users/kjosefss/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/kjosefss/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/C/Users/kjosefss/Desktop/lightgl.js/tests/gpulightmap.html",
+		"/C/Users/kjosefss/Desktop/pychip2.py",
+		"/C/Users/kjosefss/Desktop/pychip.py",
+		"/C/Users/kjosefss/Downloads/pyexcelerator-0.6.4.1/examples/col_width.py",
+		"/C/Users/kjosefss/Downloads/pyexcelerator-0.6.4.1/examples/row_styles.py",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-NBEWNone-PTS-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-SB0x-IW-RC-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-SB0x-IW-SC-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-SB0x-OP-VERT-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-AR-OA02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-CE-OARCHA-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-SB0x-OP-HOR-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-AR-OA01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-CE-OARCH2-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-CE-OGC1-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-CE-OGC2-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-CE-RIDGE-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-CE-SPINE-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-EW-OGC01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-EW-OGC02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-EW-RC-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-IW-OGC01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-IW-OGC02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-IW-RC-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-IW-SC-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-OP-HOR-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-WB0x-OP-VERT-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-TIP-ARCH-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-TIP-ENDCURVE-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-TIP-OARCH-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-TIP-USEC-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-US-EC01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-US-EC02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-US-OGA01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-US-OGA02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-US-RA-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-AA0x-US-SA-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-TIP-ARCH-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-TIP-ENDCURVE-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-TIP-OARCH-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-TIP-USEC-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-US-EC01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-US-EC02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-US-OGA01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-US-OGA02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-US-RA-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BB0x-US-SA-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-TIP-ARCH-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-TIP-ENDCURVE-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-TIP-OARCH-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-TIP-USEC-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-US-EC01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-US-EC02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-US-OGA01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-US-OGA02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-US-RA-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-CC0x-US-SA-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-AA_E-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-AA_N-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-BB_E-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-BB_W-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-CC_N-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-CC_W-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-EW01_E-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-EW01_W-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-NE01_E-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-NE01_N-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-NW01_N-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-C-NW01_W-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-AA_E-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-AA_N-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-BB_E-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-BB_W-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-CC_N-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-CC_W-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-EW01_E-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-EW01_W-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-NE01_E-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-NE01_N-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-NW01_N-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-GRID0x-G-NW01_W-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-NB0x-AR-OA01-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-NB0x-AR-OA02-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BAY13-PTS-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BAY213-PTS-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BAY212-PTS-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BAY113-PTS-V01.csv",
+		"/C/Users/kjosefss/Dropbox/workish/gms/120220_GMS/ghoutput/KIA-BAY007-PTS-V01.csv"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			")",
+			",dtype='int32'",
+			"int64",
+			"ndimage",
+			"np",
+			"pil",
+			"rgb",
+			"div",
+			"{:.2f}",
+			"frames_to_blur_",
+			".dll",
+			"d3",
+			"line chart"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"int32",
+			"{:.3f}"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "klib.js",
+					"settings":
+					{
+						"buffer_size": 3544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "rainbow.html",
+					"settings":
+					{
+						"buffer_size": 1895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "schroedinger.html",
+					"settings":
+					{
+						"buffer_size": 5175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 130.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
